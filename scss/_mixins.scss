@@ -1,0 +1,41 @@
+// Text shadow around
+//--------------------------------------------------------------------
+@mixin tSh ($tshColor: #333, $tshHeight: 1px) {
+	text-shadow: $tshColor $tshHeight 0 0px, $tshColor 0 $tshHeight 0px, $tshColor -$tshHeight 0 0px, $tshColor 0 -$tshHeight 0px;
+}
+
+
+// Text overflow (3 dots)
+//--------------------------------------------------------------------
+@mixin text-overflow {
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow: ellipsis;
+}
+
+
+// Placeholder
+//--------------------------------------------------------------------
+@mixin placeholder($placeholderColor: #000)
+{
+	::-webkit-input-placeholder {
+		color: $placeholderColor;
+	}
+	:-moz-placeholder { 
+		color: $placeholderColor;
+	}
+	::-moz-placeholder { 
+		color: $placeholderColor;
+	}
+	:-ms-input-placeholder {  
+		color: $placeholderColor;
+	}
+}
+
+// Pseudoelement
+//------------------------------------------------
+@mixin cont() {
+	display: block;
+	content:"";
+	position: absolute;
+}

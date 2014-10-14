@@ -1,0 +1,199 @@
+// Animations
+//-------------------------------------------------------------------
+@mixin anim ($name, $easing: ease-in-out, $dur: 1s, $delay: 0s) {
+	-webkit-animation: $dur $easing $delay normal forwards 1 $name;
+	-moz-animation: $dur $easing $delay normal forwards 1 $name;
+	-o-animation: $dur $easing $delay normal forwards 1 $name;
+	animation: $dur $easing $delay normal forwards 1 $name;
+}
+
+// use: @include anim(myanim,ease);
+
+
+
+// Keframes
+//--------------------------------------------------------------------
+@mixin keyframes ($animationName) {
+	@-webkit-keyframes #{$animationName} {
+		@content;
+	}
+	@-moz-keyframes #{$animationName} {
+		@content;
+	}
+	@-o-keyframes #{$animationName} {
+		@content;
+	}
+	@keyframes #{$animationName} {
+		@content;
+	}
+} 
+
+// use : @include keyframes('myanim') { from { opacity:0;} to { opacity:1;} }
+
+
+
+// Transitions
+//--------------------------------------------------------------------
+@mixin ts ($easing: ease-in-out, $dur: 0.2s, $delay: 0s) {
+	-webkit-transition: $dur $delay $easing;
+	-moz-transition: $dur $delay $easing;
+	-o-transition: $dur $delay $easing;
+	transition: $dur $delay $easing;	
+}
+
+// use : @include ts(ease-in-out);
+
+
+// Transitions for one css property
+//--------------------------------------------------------------------
+@mixin tsp ($property:opacity,$easing: ease-in-out, $dur: 0.2s, $delay: 0s) {
+	-webkit-transition: $property $dur $delay $easing;
+	-moz-transition: $property $dur $delay $easing;
+	-o-transition: $property $dur $delay $easing;
+	transition: $property $dur $delay $easing;	
+}
+
+// use : @include tsp(background-color);
+
+
+
+
+// Delay
+//--------------------------------------------------------------------
+@mixin delay ($delay: 1s) {
+	-webkit-transition-delay: $delay;
+	-moz-transition-delay: $delay;
+	-o-transition-delay: $delay;
+	transition-delay: $delay;	
+}
+
+// use : @include delay(2s);
+
+
+
+// Scale
+//--------------------------------------------------------------------
+@mixin scale ($scale: 1) {
+	-webkit-transform: scale($scale) ;
+	-moz-transform: scale($scale) ;
+	-o-transform: scale($scale);
+	transform: scale($scale);	
+}
+
+// use : @include scale(0.5s);
+
+
+
+// ScaleX
+//--------------------------------------------------------------------
+@mixin scaleX ($scale: 1) {
+	-webkit-transform: scaleX($scale) ;
+	-moz-transform: scaleX($scale) ;
+	-o-transform: scaleX($scale);
+	transform: scaleX($scale);	
+}
+
+// use : @include scaleX(0.5s);
+
+
+
+// ScaleY
+//--------------------------------------------------------------------
+@mixin scaleY ($scale: 1) {
+	-webkit-transform: scaleY($scale) ;
+	-moz-transform: scaleY($scale) ;
+	-o-transform: scaleY($scale);
+	transform: scaleY($scale);	
+}
+
+// use : @include scaleY(0.5s);
+
+
+
+// Rotate
+//--------------------------------------------------------------------
+@mixin rotate ($deg : 0deg) {
+	-webkit-transform: rotate($deg);
+	-moz-transform: 	 rotate($deg);
+	-o-transform: 		 rotate($deg);
+	transform: 		 rotate($deg);	
+}
+
+// use : @include rotate(45deg);
+
+
+
+// RotateX
+//--------------------------------------------------------------------
+@mixin rotateX ($deg : 0deg) {
+	-webkit-transform: rotateX($deg);
+	-moz-transform: 	 rotateX($deg);
+	-o-transform: 		 rotateX($deg);
+	transform: 		 rotateX($deg);	
+}
+
+// use : @include rotateX(45deg);
+
+
+// RotateY
+//--------------------------------------------------------------------
+@mixin rotateY ($deg : 0deg) {
+	-webkit-transform: rotateY($deg);
+	-moz-transform: 	 rotateY($deg);
+	-o-transform: 		 rotateY($deg);
+	transform: 		 rotateY($deg);	
+}
+
+// use : @include rotateY(45deg);
+
+
+
+// Translate
+//--------------------------------------------------------------------
+@mixin translate ($x: 20px, $y : 20px) {
+	-webkit-transform:       translate($x, $y);
+	-moz-transform: 	 translate($x, $y);
+	-o-transform: 		 translate($x, $y);
+	transform: 		 translate($x, $y);
+}
+
+// use : @include translate (10px, 10px);
+
+
+
+// TranslateX
+//--------------------------------------------------------------------
+@mixin translateX ($x: 20px) {
+	-webkit-transform:       translateX($x);
+	-moz-transform: 	 translateX($x);
+	-o-transform: 		 translateX($x);
+	transform: 		 translateX($x);
+}
+
+// use : @include translateX (10px);
+
+
+
+// TranslateY
+//--------------------------------------------------------------------
+@mixin translateY ($y: 20px) {
+	-webkit-transform:       translateY($y);
+	-moz-transform: 	 translateY($y);
+	-o-transform: 		 translateY($y);
+	transform: 		 translateY($y);
+}
+
+// use : @include translateY (10px);
+
+
+// TranslateY
+//--------------------------------------------------------------------
+@mixin origin ($x:0, $y: 0px) {
+	-webkit-transform-origin: $x, $y;
+	-moz-transform-origin: $x, $y;
+	-ms-transform-origin: $x, $y;
+	-o-transform-origin: $x, $y;
+	transform-origin: $x, $y;
+}
+
+// use : @include origin (100px, 100px);
