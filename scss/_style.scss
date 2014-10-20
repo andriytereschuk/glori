@@ -69,14 +69,10 @@
 	height: 100%;
 
 	.swiper-slide {
+		position: relative;
 		width: 100%;
 		height: 100%;
 	}
-}
-
-.description {
-	background: url("../images/description.jpg") center top no-repeat;
-	background-size: cover;
 }
 
 .why-we {
@@ -108,4 +104,849 @@
 .contacts {
 	background: url("../images/contacts.jpg") center top no-repeat;
 	background-size: cover;
+}
+
+// Nav
+// --------------------------------------
+
+nav {
+	position: absolute;
+	top: 50%;
+	margin-top: -108px;
+	right: 30px;
+	z-index: 100;
+
+	a {
+		display: block;
+		position: relative;
+		width: 31px;
+		height: 31px;
+
+
+		&:before {
+			@include cont;
+			background-color: #fff;
+			border-radius: 100%;
+			width: 7px;
+			height: 7px;
+			top: 12px;
+			left: 12px;
+			@include ts;
+		}
+
+		&:after {
+			@include cont;
+			background-color: transparent;
+			border-radius: 100%;
+			width: 7px;
+			height: 7px;
+			top: 10px;
+			left: 10px;
+			border: 2px solid $b;
+			opacity: 0;
+			@include ts;			
+		}
+
+		span {
+			overflow: hidden;
+			width: 0;
+			opacity: 0;
+			position: absolute;
+			color: $b;
+			right: 28px;
+			top: 5px;
+			white-space: nowrap;
+			-webkit-transform: translateX(10px);
+			-moz-transform: translateX(10px);
+			-ms-transform: translateX(10px);
+			-o-transform: translateX(10px);
+			transform: translateX(10px);
+		}
+
+		&:hover {
+			&:before {
+				background-color: $b;
+			}
+
+			span {
+				opacity: 1;
+				overflow: visible;
+				-webkit-transform: translateX(0);
+				-moz-transform: translateX(0);
+				-ms-transform: translateX(0);
+				-o-transform: translateX(0);
+				transform: translateX(0);
+				-webkit-transition: opacity 0.3s ease-in, -webkit-transform 0.3s ease-in;
+				-moz-transition: opacity 0.3s ease-in, -moz-transform 0.3s ease-in;
+				-o-transition: opacity 0.3s ease-in, -o-transform 0.3s ease-in;
+				transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+				width: auto;
+			}
+		}
+
+		&.active {
+			&:before {
+				background-color: transparent !important;
+			}
+
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+
+	// we-are
+
+	&.page1 {
+		a {
+			&:before {
+				background-color: $b;
+			}
+
+			span {
+				color: $g;
+			}
+
+			&:hover {
+				&:before {
+					background-color: $g;
+				}				
+			}
+
+			&.active {
+				&:after {
+					border-color: $g;
+				}
+			}
+		}
+	}
+
+	// services
+
+	&.page2 {
+		a {
+			&:before {
+				background-color: #fff;
+			}
+
+			span {
+				color: $b;
+			}
+
+			&:hover {
+				&:before {
+					background-color: $b;
+				}				
+			}
+
+			&.active {
+				&:after {
+					border-color: $b;
+				}
+			}
+		}
+	}
+
+	// team
+
+	&.page3 {
+		a {
+			&:before {
+				background-color: $b;
+			}
+
+			span {
+				color: $g;
+			}
+
+			&:hover {
+				&:before {
+					background-color: $g;
+				}				
+			}
+
+			&.active {
+				&:after {
+					border-color: $g;
+				}
+			}
+		}
+	}
+
+	// testimonials
+
+	&.page4 {
+		a {
+			&:before {
+				background-color: #fff;
+			}
+
+			span {
+				color: $b;
+			}
+
+			&:hover {
+				&:before {
+					background-color: $b;
+				}				
+			}
+
+			&.active {
+				&:after {
+					border-color: $b;
+				}
+			}
+		}
+	}			
+
+
+	// feedback
+
+	&.page5 {
+		a {
+			&:before {
+				background-color: $b;
+			}
+
+			span {
+				color: $g;
+			}
+
+			&:hover {
+				&:before {
+					background-color: $g;
+				}				
+			}
+
+			&.active {
+				&:after {
+					border-color: $g;
+				}
+			}
+		}
+	}
+
+	// contacts
+
+	&.page6 {
+		a {
+			&:before {
+				background-color: #fff;
+			}
+
+			span {
+				color: $b;
+			}
+
+			&:hover {
+				&:before {
+					background-color: $b;
+				}				
+			}
+
+			&.active {
+				&:after {
+					border-color: $b;
+				}
+			}
+		}
+	}			
+}
+
+// Home
+// -------------------------------------
+
+.video-container {
+	display: block;
+	position: absolute;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.video-container video, .video-container iframe {
+	background-color: #3b3c3b;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+.mid {
+	position: relative;
+	margin: 0 auto;	
+	padding: 90px 0;
+	width: 820px;
+	@include tsp(top,ease-in-out,0.3s);
+}
+
+.home {
+	.mid {
+		width: 700px;
+		text-align: center;
+
+		i {
+			margin-bottom: 70px;
+		}
+
+		p {
+			font-size: 24px;
+			line-height: 30px;
+			color: #fff;
+		}
+	}
+}
+
+h1 {
+	font-size: 44px;
+	margin-bottom: 40px;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 30px;
+	text-align: center;
+	position: absolute;
+	top: 40px;
+	width: 100%;
+	text-transform: uppercase;
+}
+
+.top {
+	height: 70px;
+	background-color: rgba(0,0,0,0.26);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	-webkit-backface-visibility: hidden;	
+}
+
+.icon-logo2 {
+	float: left;
+	margin-left: 42px;
+	margin-top: 22px;
+}
+
+.online-offer {
+	float: right;
+	margin-right: 42px;
+	margin-top: 24px;
+	color: #fff;
+	text-transform: uppercase;
+	@include ts;
+
+	&:hover {
+		color: $b;
+	}
+}
+
+.icon-arrow-down {
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -23px;
+	bottom: 60px;
+	@include ts;
+	-webkit-animation: downarrow 3s infinite;
+	-moz-animation: downarrow 3s infinite;
+	-o-animation: downarrow 3s infinite;
+	animation: downarrow 3s infinite;
+}
+
+@-webkit-keyframes downarrow {
+	0%{bottom:60px}
+	20%{bottom:50px}
+	80%{bottom:50px}
+	100%{bottom:60px}
+}
+@-moz-keyframes downarrow {
+	0%{bottom:60px}
+	20%{bottom:50px}
+	80%{bottom:50px}
+	100%{bottom:60px}
+}
+@-o-keyframes downarrow {
+	0%{bottom:60px}
+	20%{bottom:50px}
+	80%{bottom:50px}
+	100%{bottom:60px}
+}
+@keyframes downarrow {
+	0%{bottom:60px}
+	20%{bottom:50px}
+	80%{bottom:50px}
+	100%{bottom:60px}
+}
+
+// feedback
+// -----------------------------------
+
+.feedback {
+
+	.mid {
+		width: 600px;
+	}
+
+	h3 {
+		font-size: 24px;
+		color: $g;
+		margin-bottom: 12px;
+		text-transform: uppercase;
+	}
+
+	p {
+		margin-bottom: 14px;
+		font-size: 18px;
+	}
+
+	@include placeholder(#888);
+
+	input {
+		background-color: #fff;
+		font-size: 18px;
+		padding: 20px 8px 20px 23px;
+		width: 100%;
+		border: 2px solid #fff;
+		border-bottom: 2px solid #d4d4d4;
+		color: #888;
+		margin-bottom: 13px;
+		@include ts;
+
+		&:hover {
+			border-bottom: 2px solid $b;
+		}
+
+		&:focus {
+			outline: none;
+			border: 2px solid  $b;
+		}
+
+		&.error {
+			border-bottom: 2px solid red;
+
+			&:focus {
+				border: 2px solid  $b;
+			}
+		}		
+	}
+
+	textarea {
+		background-color: #fff;
+		padding: 20px 8px 20px 23px;
+		font-size: 18px;
+		width: 100%;
+		border: 2px solid #fff;
+		border-bottom: 2px solid #d4d4d4;
+		color: #888;
+		margin-bottom: 28px;
+		height: 246px;
+		@include ts;
+
+		&:hover {
+			border-bottom: 2px solid $b;
+		}
+
+		&:focus {
+			outline: none;
+			border: 2px solid  $b;
+		}
+
+		&.error {
+			border-bottom: 2px solid red;
+
+			&:focus {
+				border: 2px solid  $b;
+			}			
+		}		
+	}
+
+	.send {
+		display: block;
+		width: 216px;
+		height: 64px;
+		line-height: 64px;
+		text-transform: uppercase;
+		text-align: center;
+		margin: 0 auto 20px;
+		font-size: 18px;
+		background-color: #40c5e3;
+		border-bottom: 2px solid #36a5be;
+		@include ts;
+
+		&:hover {
+			background-color: #40BCD8;
+		}
+	}
+}
+
+// Why-we
+// --------------------------
+
+.why-we {
+	.mid {
+		height: 745px;
+	}
+}
+
+.why-left {
+	float: left;
+	width: 260px;
+
+	a {
+		display: table;
+		background-color: rgba(255,255,255,0.9);
+		width: 100%;
+		height: 79px;
+		border: 1px solid #fff;
+		text-align: center;
+		margin-bottom: 2px;
+		@include ts(ease,0.3s);
+
+		span {
+			color: $g;
+			text-transform: uppercase;
+			line-height: 26px;
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		&.active {
+			background-color: $b;
+			border: 1px solid $b;
+
+			span {
+				font-family: $lato;
+				color: #fff;
+				font-weight: 700;
+				font-size: 22px;	
+			}
+		}
+	}
+}
+
+.why-right {
+	float: right;
+	width: 560px;
+	border-left: 2px solid $b;
+	background-color: rgba(255,255,255,0.9);
+	height: 100%;
+	position: relative;
+	padding: 0 20px;
+}
+
+.swiper-why {
+	width: 100%;
+	height: 100%;
+
+	.swiper-slide {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+
+		.why-inner {
+			position: relative;
+			padding: 0 20px;
+			display: table;
+			height: 565px;
+
+			p {
+				display: table-cell;
+				vertical-align: middle;				
+			}	
+		}		
+	}
+}
+
+// services
+// ----------------------
+
+.akardion {
+	a {
+		display: block;
+		border: 1px solid #a4a7a9;
+		background-color: rgba(255,255,255,0.15);
+		height: 76px;
+		padding: 0 0 0 36px;
+		position: relative;
+		z-index: 2;
+		@include ts;
+
+		&:hover {
+			background-color: rgba(64,197,227,0.62);			
+		}
+
+		.service-h {
+			height: 75px;
+			line-height: 75px;
+			float: left;
+			color: #fff;
+			font-size: 24px;
+			font-family: $lato;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+
+		.service-m {
+			height: 75px;
+			line-height: 75px;
+			float: right;
+			width: 202px;
+			border-left: 1px solid #bcbebf;
+			color: #fff;
+			font-size: 14px;
+			text-transform: uppercase;
+			text-align: center;
+
+			i {
+				margin-left: 20px;
+				position: relative;
+				top: 12px;
+				@include ts(linear,0.3s);
+			}			
+		}
+
+		.clr {
+			display: block;
+		}
+
+		&.active {
+
+			.service-m {
+				i {
+					@include rotate(90deg);
+				}
+			}
+
+			& + .service-t {
+				height: auto;
+				opacity: 1;
+				@include translateY(0px);
+			}
+		}		
+	}
+
+	.service-t {
+		width: 100%;
+		margin-bottom: 2px;
+		overflow: hidden;
+		background-color: rgba(255,255,255,0.69);
+		height: 0;
+		opacity: 0;
+		position: relative;
+		@include ts(ease,0.7s);
+		@include translateY(10px);
+
+		.service-inner {
+			padding: 20px 36px 20px 36px;
+		}
+
+		p {
+			font-size: 16px;
+			line-height: 22px;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+// Testimonials
+// --------------------------
+
+.profi-img {
+	width: 260px;
+	float: left;
+
+	img {
+		width: 100%;
+	}
+}
+
+.profi-info {
+	width: 522px;
+	float: right;
+
+	h3 {
+		font-family: $lato;
+		font-size: 24px;
+		font-weight: 700;
+		color: $g;
+		margin-bottom: 24px;
+		text-transform: uppercase;
+	}
+
+	hr {
+		height: 2px;
+		background-color: $b;
+		width: 144px;
+		margin-bottom: 30px;
+	}
+
+	p {
+		font-size: 18px;
+		line-height: 22px;
+		margin-bottom: 35px;
+	}
+
+	.more-info {
+		display: block;
+		width: 258px;
+		height: 64px;
+		line-height: 64px;
+		text-align: center;
+		background-color: $b;
+		color: #fff;
+		font-size: 18px;
+		text-transform: uppercase;
+		border-bottom: 2px solid #36a5be;
+		@include ts(ease,0.3s);
+
+		&:hover {
+			background-color: #444;
+			border-bottom: 2px solid #212121;
+		}
+	}
+}
+
+.profi1 {
+	margin-bottom: 40px;
+}
+
+// Testimonials
+// -----------------------------
+
+.swiper-testimonials {
+	width: 530px;
+	height: 270px;
+	margin: 0 auto;
+
+	.swiper-slide {
+		height: 270px;
+
+		.test-inner {
+		padding: 0 10px;
+			.date {
+				font-size: 18px;
+				margin-bottom: 16px;
+				color: $b;
+			}
+
+			h3 {
+				font-size: 24px;
+				font-weight: 700;
+				color: #fff;
+				font-family: $lato;
+				margin-bottom: 24px;
+				text-transform: uppercase;
+			}
+
+			p {
+				font-size: 17px;
+				line-height: 21px;
+				color: #fff;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+.testimonials {
+	.icon-arrow-left {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 210px;
+
+		&:hover {
+			@include sprite($icon, icon-arrow-left-hover);
+		}
+	}
+
+	.icon-arrow-right {
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 200px;
+
+		&:hover {
+			@include sprite($icon, icon-arrow-right-hover);
+		}				
+	}	
+}
+
+.timeline {
+	width: 510px;
+	margin: 40px auto 0;
+	height: 2px;
+	background-color: #fff;
+	position: relative;	
+
+	.status {
+		height: 2px;
+		background-color: $b;
+		width: 0;
+	}
+
+	&.go {
+		.status	{
+			@include  anim (status, linear, 3s);
+			-webkit-animation: 10s linear 0 normal forwards 1 status;
+			-moz-animation: 10s linear 0 normal forwards 1 status;
+			-o-animation: 10s linear 0 normal forwards 1 status;
+			animation: 10s linear 0 normal forwards 1 status;			
+		}		
+	}
+}
+
+@include keyframes('status') { 
+	from { width : 0;}
+	to { width : 100%;} 
+}
+
+// Contacts
+// ----------------------
+
+.contact-small {
+	width: 370px;
+	height: 270px;
+	margin: 0 auto;
+	position: relative;
+	background-color: rgba(64,197,227,0.75);
+	padding: 40px 0 0 35px;
+
+	.icon-blue-arrow {
+		position: absolute;
+		bottom: -28px;
+		right: 66px;
+	}
+
+	.icon-logo3 {
+		display: block;
+		margin-bottom: 40px;
+	}
+
+	a {
+		margin-right: 8px;
+		margin-top: 27px;
+		@include ts(ease,0.6s);
+
+		&:hover {
+			@include translateY(-5px);
+		}
+	}
+}
+
+.con {
+	color: #fff;
+	span {
+		color: $g;
+		display: inline-block;
+		width: 82px;
+		margin-bottom: 8px;
+	}
 }

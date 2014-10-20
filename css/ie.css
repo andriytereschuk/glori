@@ -1,0 +1,19 @@
+body {
+	overflow: hidden;
+}
+
+body:after {
+	overflow: hidden;
+	position: fixed;
+	background-color: #fff;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;	
+	z-index: 1000;
+	color: #e74c3c;
+	font-size: 30px;
+	text-align: center;
+	line-height: 100px;
+	content:"Your browser is outdated! Please, update it to version 9 or higher.";
+}

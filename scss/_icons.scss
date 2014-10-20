@@ -1,0 +1,61 @@
+@import "compass/css3";
+
+$icon: sprite-map("icons/*.png", $spacing: 5px);
+
+[class*="icon-"]{
+	display: inline-block;
+}
+
+@mixin image-size($path){
+	width: image-width($path);
+	height: image-height($path);
+}
+
+// Sprite mixin
+@mixin sprite($map, $sprite, $width-height:1){
+	background: sprite($map,  $sprite) no-repeat;
+
+	@if $width-height == 1
+	{
+		@include image-size(sprite-file($map, $sprite));
+	}
+	@else{}
+}
+
+// Custom Icons
+
+.icon-logo {
+	@include sprite($icon, icon-logo);
+}
+
+.icon-logo2 {
+	@include sprite($icon, icon-logo2);
+}
+
+.icon-arrow-down {
+	@include sprite($icon, icon-arrow-down);
+}
+
+.icon-arrow-right {
+	@include sprite($icon, icon-arrow-right);
+}
+
+.icon-arrow-left {
+	@include sprite($icon, icon-arrow-left);
+}
+
+.icon-blue-arrow {
+	@include sprite($icon, icon-blue-arrow);	
+}
+
+.icon-logo3 {
+	@include sprite($icon, icon-logo3);	
+}
+
+.icon-facebook {
+	@include sprite($icon, icon-facebook);	
+}
+
+.icon-in {
+	@include sprite($icon, icon-in);	
+}

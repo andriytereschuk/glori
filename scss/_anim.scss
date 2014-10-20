@@ -1,6 +1,6 @@
 // Animations
 //-------------------------------------------------------------------
-@mixin anim ($name, $easing: ease-in-out, $dur: 1s, $delay: 0s) {
+@mixin anim ($name, $easing: ease, $dur: 1s, $delay: 0s) {
 	-webkit-animation: $dur $easing $delay normal forwards 1 $name;
 	-moz-animation: $dur $easing $delay normal forwards 1 $name;
 	-o-animation: $dur $easing $delay normal forwards 1 $name;
@@ -34,19 +34,19 @@
 
 // Transitions
 //--------------------------------------------------------------------
-@mixin ts ($easing: ease-in-out, $dur: 0.2s, $delay: 0s) {
+@mixin ts ($easing: ease, $dur: 0.2s, $delay: 0s) {
 	-webkit-transition: $dur $delay $easing;
 	-moz-transition: $dur $delay $easing;
 	-o-transition: $dur $delay $easing;
 	transition: $dur $delay $easing;	
 }
 
-// use : @include ts(ease-in-out);
+// use : @include ts(ease);
 
 
 // Transitions for one css property
 //--------------------------------------------------------------------
-@mixin tsp ($property:opacity,$easing: ease-in-out, $dur: 0.2s, $delay: 0s) {
+@mixin tsp ($property:opacity,$easing: ease, $dur: 0.2s, $delay: 0s) {
 	-webkit-transition: $property $dur $delay $easing;
 	-moz-transition: $property $dur $delay $easing;
 	-o-transition: $property $dur $delay $easing;
