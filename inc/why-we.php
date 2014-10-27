@@ -57,4 +57,6 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="clr"></div>
 </div>

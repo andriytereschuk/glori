@@ -4,8 +4,7 @@
 	<!-- META TAGS -->
 	<!-- ========================================================= -->
 	<meta charset="UTF-8">
-	<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
-	<meta name="viewport" content="width=860">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="format-detection" content="telephone=no" />	
 	<meta name="description" content="">
@@ -22,6 +21,7 @@
 	<!-- CSS -->
 	<!-- ========================================================= -->
 	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -42,3 +42,20 @@
 		<li><a href="#"><span>Контакти</span></a></li>
 	</ul>
 </nav>
+
+<div class="menu-mobile">
+	<a href="#" class="icon-close-white"></a>
+	<i class="icon-logo-small"></i>
+	<div class="hide-menu">
+		<a href="#" class="active">головна</a>
+		<a href="#">Чому ми?</a>
+		<a href="#">Послуги</a>
+		<a href="#">Команда</a>
+		<a href="#">відгуки</a>
+		<a href="#">зворотній звязок</a>
+		<a href="#">контакти</a>
+	</div>
+</div>
+
+<a href="#" class="mobile-menu-opener"><span></span></a>
+

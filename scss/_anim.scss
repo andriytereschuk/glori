@@ -56,6 +56,18 @@
 // use : @include tsp(background-color);
 
 
+// Transitions and transform
+//--------------------------------------------------------------------
+@mixin tsf ($dur1: 0.2s,$easing1: ease, $dur2: 0.2s, $easing2: ease) {
+	-webkit-transition: $dur1 $easing1, -webkit-transform $dur2 $easing2;
+	-moz-transition: $dur1 $easing1, -moz-transform $dur2 $easing2;
+	-o-transition:  $dur1 $easing1, -o-transform $dur2 $easing2;
+	transition:  $dur1 $easing1, transform $dur2 $easing2;		
+}
+
+// use : @include tsf;
+
+
 
 
 // Delay

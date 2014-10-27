@@ -4,8 +4,9 @@ body {
 	color: $g;
 	font-family: Tahoma, sans-serif;
 	background-color: #fff;
-	min-width: 860px;
+	min-width: 320px;
 	opacity: 0;
+	overflow: hidden;
 	@include tsp(opacity,ease,0.3s);
 
 	&.loaded {

@@ -1,0 +1,344 @@
+// responsive view  h < 768px
+@media (max-height: 767px) {
+	// home
+	h2 {
+		font-size: 26px;
+		top: 25px;
+	}
+
+	.mid {
+		padding-top: 70px;
+		padding-bottom: 0;
+	}
+
+	.home {
+		.mid {
+			padding-top: 60px;
+
+			p {
+				font-size: 22px;
+			}			
+		}		
+	}
+
+	.icon-arrow-down {
+		@include translateY(30px);
+	}
+
+	// why-we
+	.why-we {
+		.mid {
+			padding-top: 20px;
+		}
+	}
+
+	.why-left a {
+		height: 60px;
+	}
+
+	.why-left a.active span {
+		font-size: 18px;
+	}
+
+	.why-right {
+		height: 432px;
+	}
+
+	// services
+
+	.services {
+		.mid {
+			padding-bottom: 20px;
+		}
+	}
+
+	.akardion a {
+		height: 60px; 
+
+		.service-h {
+			height: 60px;
+			line-height: 60px;
+			font-size: 22px; 
+		}
+
+		.service-m {
+			height: 60px;
+			line-height: 60px; 
+		}		
+	}
+
+	//team 
+
+	.team {
+		.mid {
+			padding-top: 30px;
+		}
+	}
+
+	.profi1 {
+		margin-bottom: 30px;
+	}
+
+	.profi-img {
+		width: 200px;
+	}
+
+	.profi-info {
+		width: 582px;
+	}
+
+	.profi-info {
+		h3 {
+			font-size: 20px;
+			margin-bottom: 16px;
+		}
+
+		hr {
+			margin-bottom: 18px;
+		}
+
+		p {
+			font-size: 16px;
+			line-height: 22px;
+			margin-bottom: 26px;			
+		}
+
+		.more-info {
+			width: 220px;
+			height: 50px;
+			line-height: 50px;
+			font-size: 16px;			
+		}		
+	}
+
+	// testimonials 
+	.testimonials {
+		.mid {
+			padding-bottom: 40px;
+		}
+	}
+
+	// feedback 
+	.feedback  {
+		.mid {
+			padding-bottom: 20px;
+		}
+
+		input {
+			padding: 12px 8px 12px 23px;
+		}
+
+		textarea {
+			padding: 12px 8px 12px 23px;
+			height: 180px;
+		}
+	}
+
+	// contacts
+	.contacts {
+		.mid {
+			padding-top: 0;
+		}
+	}
+
+	//modal
+
+	.modal {
+		top: 70px;
+	}
+
+}
+
+
+// responsive view  w < 960px
+@media (max-width: 959px) {
+	nav, .top {
+		display: none;
+	}
+
+	.mobile-menu-opener {
+		display: block;
+	}
+
+	h1 {
+		font-size: 42px;
+	}
+	// home
+	h2 {
+		font-size: 26px;
+		top: 25px;
+	}
+
+	.mid {
+		padding-top: 70px;
+		padding-bottom: 0;
+		width: 600px;
+	}
+
+	.home {
+		.mid {
+			padding-top: 0;
+			width: 80%;
+			margin-left: auto;
+			margin-right: auto;			
+
+			p {
+				font-size: 22px;
+			}
+
+			i {
+				margin-bottom: 60px;
+			}						
+		}		
+	}
+
+	.icon-arrow-down {
+		@include translateY(30px);
+	}
+
+	// why-we
+	.why-we {
+		.mid {
+			padding-top: 20px;
+		}
+	}
+
+	.why-left  {
+		width: 190px;
+	}
+
+	.why-right {
+		width: 410px;
+	}	
+
+	.why-left a {
+		height: 50px;
+	}
+
+	.why-left a.active span {
+		font-size: 14px;
+	}
+
+	.why-right {
+		height: 362px;
+	}
+
+	// services
+
+	.services {
+		.mid {
+			padding-bottom: 20px;
+		}
+	}
+
+	.akardion a {
+		height: 60px; 
+
+		.service-h {
+			height: 60px;
+			line-height: 60px;
+			font-size: 20px; 
+		}
+
+		.service-m {
+			height: 60px;
+			line-height: 60px; 
+		}		
+	}
+
+	//team 
+
+	.team {
+		.mid {
+			padding-top: 30px;
+		}
+	}
+
+	.profi1 {
+		margin-bottom: 50px;
+	}
+
+	.profi {
+		position: relative;
+	}
+
+	.profi-img {
+		width: 180px;
+	}
+
+	.profi-info {
+		width: 400px;
+	}
+
+	.profi-info {
+		h3 {
+			font-size: 20px;
+			margin-bottom: 16px;
+		}
+
+		hr {
+			margin-bottom: 18px;
+		}
+
+		p {
+			font-size: 16px;
+			line-height: 22px;
+			margin-bottom: 20px;			
+		}
+
+		.more-info {
+			width: 180px;
+			height: 40px;
+			line-height: 40px;
+			font-size: 14px;	
+			position: absolute;
+			left: 0;
+			top: 196px;		
+		}		
+	}
+
+	// testimonials 
+	.testimonials {
+		.mid {
+			padding-bottom: 40px;
+		}
+	}
+
+	// feedback 
+	.feedback  {
+		.mid {
+			padding-bottom: 20px;
+		}
+
+		input {
+			padding: 12px 8px 12px 23px;
+		}
+
+		textarea {
+			padding: 12px 8px 12px 23px;
+			height: 180px;
+		}
+	}
+
+	// contacts
+	.contacts {
+		.mid {
+			padding-top: 0;
+		}
+	}
+
+	//modal
+
+	.modal {
+		top: 70px;
+		width: 80%;
+		margin-left: -40%;
+	}
+}
+
+// FULL responsive view  w < 640px and h < 580px
+@media (max-width: 639px) and (max-height: 579px) {
+	.mid {
+		display: none;
+	}
+}

@@ -1,7 +1,6 @@
 $(function(){
-	function slideHeight() {
+	function calcHeight() {
 		var h = $(window).height();
-		var items = $('.mid').length;
 		$(".mid").each(function() {
 			var h2 = $(this).outerHeight();
 			if (h>h2) {
@@ -11,12 +10,18 @@ $(function(){
 				$(this).parent(".swiper-slide").css("height",h2+"px").children(".mid").css("top",0);
 			}
 		});
+
+		// modal
+
+		$(".modal").css("height",h-120 + "px");
+		$(".scroll-content").css("height",h-264 + "px");
+		$(".content").mCustomScrollbar({theme:"dark"});
 	};
 
 	$(window).resize(function(){
-		slideHeight();
+		calcHeight();
 	});
-	slideHeight();
+	calcHeight();
 
 	var w = $(window).width();
 	var sp;
@@ -47,6 +52,11 @@ $(function(){
 			$("nav")
 				.attr("class","")
 				.addClass("page"+i)
+				.find("a")
+				.removeClass("active")
+				.eq(i)
+				.addClass("active");
+			$(".hide-menu")
 				.find("a")
 				.removeClass("active")
 				.eq(i)
@@ -162,15 +172,13 @@ $(function(){
 		event.preventDefault();
 		if ($(this).hasClass("active")) {
 			$(this).removeClass("active");
-			slideHeight();
-			swiperParent.reInit();
 		}
 		else {
 			$(".akardion a").removeClass("active");
 			$(this).addClass("active");
-			slideHeight();
-			swiperParent.reInit();
-		}		
+		}
+		calcHeight();
+		swiperParent.reInit();			
 	});
 
 	// slider we are
@@ -203,6 +211,52 @@ $(function(){
 	$("#right").click(function(event){
 		event.preventDefault();
 		swiperTest.swipeNext();			
-	});							
+	});
 
+	// Modal team
+	$(".modal").css("z-index",-1);
+
+	$(".icon-close-popup").click(function(e) {
+		e.preventDefault();
+		$(".modal").removeClass("modal-anim");
+		setTimeout(function(){
+			$(".modal").css("z-index",-1);
+		},400);
+	});
+
+	$("#worker1-info").click(function(e) {
+		e.preventDefault();
+		$("#worker1").css("z-index",1);
+		$("#worker1").addClass("modal-anim");
+	});
+
+	$("#worker2-info").click(function(e) {
+		e.preventDefault();
+		$("#worker2").css("z-index",1);
+		$("#worker2").addClass("modal-anim");
+	});
+
+	// mobile menu
+	$(".mobile-menu-opener").click(function(e) {
+		e.preventDefault();
+		$(".menu-mobile").addClass("menu-mobile-open");
+	});
+
+	$(".icon-close-white").click(function(e) {
+		e.preventDefault();
+		closeMobileMenu();
+	});	
+
+	function closeMobileMenu() {
+		$(".menu-mobile").removeClass("menu-mobile-open");
+	}
+
+	$(".hide-menu a").click(function(e) {
+		e.preventDefault();
+		$(".hide-menu a").removeClass("active");
+		$(this).addClass("active");
+		var i = $(this).index();
+		$("nav ul li").eq(i).children("a").click();
+		closeMobileMenu();
+	});		
 });

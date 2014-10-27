@@ -59,3 +59,11 @@ $icon: sprite-map("icons/*.png", $spacing: 5px);
 .icon-in {
 	@include sprite($icon, icon-in);	
 }
+
+.icon-logo-small {
+	@include sprite($icon, icon-logo-small);
+}
+
+.icon-close-white {
+	@include sprite($icon, icon-close-white);
+}
