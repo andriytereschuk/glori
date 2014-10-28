@@ -388,6 +388,9 @@ nav {
 
 .home {
 	.mid {
+
+		padding-top: 50px;
+		padding-bottom: 60px;
 		width: 700px;
 		text-align: center;
 
@@ -428,8 +431,8 @@ h2 {
 }
 
 .top {
-	height: 70px;
-	background-color: rgba(0,0,0,0.26);
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -469,29 +472,11 @@ h2 {
 	animation: downarrow 3s infinite;
 }
 
-@-webkit-keyframes downarrow {
-	0%{bottom:60px}
-	20%{bottom:50px}
-	80%{bottom:50px}
-	100%{bottom:60px}
-}
-@-moz-keyframes downarrow {
-	0%{bottom:60px}
-	20%{bottom:50px}
-	80%{bottom:50px}
-	100%{bottom:60px}
-}
-@-o-keyframes downarrow {
-	0%{bottom:60px}
-	20%{bottom:50px}
-	80%{bottom:50px}
-	100%{bottom:60px}
-}
-@keyframes downarrow {
-	0%{bottom:60px}
-	20%{bottom:50px}
-	80%{bottom:50px}
-	100%{bottom:60px}
+@include keyframes('downarrow') {
+	0%{@include translateY(0px);}
+	20%{@include translateY(-10px);}
+	80%{@include translateY(-10px);}
+	100%{@include translateY(0px);}
 }
 
 // feedback
@@ -768,6 +753,10 @@ h2 {
 
 	img {
 		width: 100%;
+
+		&:hover {
+			cursor: pointer;
+		}
 	}
 }
 
@@ -1014,7 +1003,7 @@ h2 {
 // Scrollbar
 // ----------------------------
 
-.scroll-content {
+.content {
 	overflow: hidden;
 
 	p {

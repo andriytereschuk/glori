@@ -16,7 +16,7 @@
 		<div class="clr"></div>
 	</div>
 
-	<div class="profi">
+	<div class="profi profi2">
 		<div class="profi-img">
 			<img src="images/lilya-hermanovych.jpg" alt="">
 		</div>

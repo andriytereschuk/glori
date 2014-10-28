@@ -1,3 +1,13 @@
+<div class="modal" id="modal">
+	<a href="#" class="icon-close-popup"></a>
+	<div class="modal-h">test</div>
+
+	<div class="modal-content content">
+		test
+	</div>
+</div>
+
+
 <script src="js/jquery.min.js"></script>
 <script src="js/swipper.js"></script>
 <script src="js/hash.js"></script>

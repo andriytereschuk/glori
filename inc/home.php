@@ -1,8 +1,7 @@
-<div class="video-container">
-	<video preload="auto" loop autoplay muted webkit-playsinline poster="http://union.co/assets/img/jumbotron/home/backgrounds/poster.1407856460.jpg">
-		<source type="application/vnd.apple.mpegurl" src="http://player.vimeo.com/external/101337508.m3u8?p=high,standard,mobile&amp;s=60f2f3f8d81893b090df1b67e97a6eca">
-		<source type="video/mp4" src="http://player.vimeo.com/external/101337508.hd.mp4?s=0fc2909c3da55900546f15867d760a48">
-		<source type="video/ogg" src="http://union.co/assets/media/home.1408530321.ogv">
+<div class="video-container" style="background-image:url(https://i.vimeocdn.com/video/494435703.webp?mw=960)">
+	<video preload="auto" loop autoplay muted webkit-playsinline poster="https://i.vimeocdn.com/video/494435703.webp?mw=960">
+		<source type="video/mp4" src="https://pdlvimeocdn-a.akamaihd.net/73204/060/301708415.mp4?token2=1414510648_603b5da509077fc83fc74d79706ac652&amp;aksessionid=aece48add10ac8b2">
+		<source type="video/ogg" src="video/glori.ogv">
 	</video>
 </div>
 
