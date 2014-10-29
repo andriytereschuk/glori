@@ -1,6 +1,6 @@
 <div class="video-container" style="background-image:url(https://i.vimeocdn.com/video/494435703.webp?mw=960)">
 	<video preload="auto" loop autoplay muted webkit-playsinline poster="https://i.vimeocdn.com/video/494435703.webp?mw=960">
-		<source type="video/mp4" src="https://pdlvimeocdn-a.akamaihd.net/73204/060/301708415.mp4?token2=1414510648_603b5da509077fc83fc74d79706ac652&amp;aksessionid=aece48add10ac8b2">
+		<source type="video/mp4" src="https://pdlvimeocdn-a.akamaihd.net/80083/614/301760429.mp4?token2=1414580303_d32ca6d1c159700f7594f7cf7cade134&amp;aksessionid=aa172268197ba1a7">
 		<source type="video/ogg" src="video/glori.ogv">
 	</video>
 </div>
