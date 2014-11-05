@@ -29,9 +29,14 @@ $(function(){
 		$(".scroll-content").mCustomScrollbar({theme:"dark"});
 	};
 
-	$(window).resize(function(){
+	window.addEventListener("resize", function() {
 		calcHeight();
-	});
+	}, false);
+
+	window.addEventListener("orientationchange", function() {
+		calcHeight();
+	}, false);
+
 	calcHeight();
 
 	var w = $(window).width();
@@ -138,21 +143,53 @@ $(function(){
 		var name = $("#name").val();
 		var email = $("#email").val();
 		var message = $("#message").val();
-		var form = '1';
+		var form = 1;
 
-		$.ajax({
-			type: "POST",
-			url: "mail.php",
-			data: {
-				name: name,
-				email: email ,
-				message: message,
-				form: form
-			},
-			success: function(data) {
-				alert("Повідомлення відіслано");
-			}
-		});
+		if (name == '') 
+		{
+			$("#name").addClass("error");
+			form = 0;
+		}
+
+		if (email == '') 
+		{
+			$("#email").addClass("error");
+			form = 0;
+		}
+
+		if (message == '') 
+		{
+			$("#message").addClass("error");
+			form = 0;
+		}				
+
+		var reg = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i); 
+		if (!reg.test(email))
+		{
+			$("#email").addClass("error");
+			form = 0;
+		}
+
+		if (form == 1)
+		{
+			$.ajax({
+				type: "POST",
+				url: "mail.php",
+				data: {
+					name: name,
+					email: email ,
+					message: message,
+					form: form
+				},
+				success: function(data) {
+					alert("Повідомлення відіслано");
+				}
+			});
+		}		
+	});
+
+	$("input,textarea").focus(function(){
+		$(this).removeClass("error");
 	});
 
 
@@ -160,7 +197,12 @@ $(function(){
 
 	var swiperWhy = new Swiper('.swiper-why',{
 		speed: 300,
-		simulateTouch: false
+		simulateTouch: false,
+		onSlideChangeEnd: function(swiperWhy){
+			var i = swiperWhy.activeIndex;
+			$(".why-left a").removeClass("active");
+			$(".why-left a").eq(i).addClass("active");
+		}
 	});
 
 	// why-left a click
@@ -270,7 +312,7 @@ $(function(){
 	// mobile menu
 	$(".mobile-menu-opener").click(function(e) {
 		e.preventDefault();
-		$(".menu-mobile").addClass("menu-mobile-open");
+		$(".menu-mobile").addClass("menu-mobile-open").animate({right: 0}, 300);
 	});
 
 	$(".icon-close-white").click(function(e) {
@@ -279,16 +321,19 @@ $(function(){
 	});	
 
 	function closeMobileMenu() {
-		$(".menu-mobile").removeClass("menu-mobile-open");
+		$(".menu-mobile").animate({right: "-280px"}, 300, function(){
+			$(".menu-mobile").removeClass("menu-mobile-open");
+		});
 	}
 
 	$(".hide-menu a").click(function(e) {
 		e.preventDefault();
+		$(".menu-mobile").removeClass("menu-mobile-open");
+		$(".menu-mobile").css("right","-280px");		
 		$(".hide-menu a").removeClass("active");
 		$(this).addClass("active");
 		var i = $(this).index();
 		$("nav ul li").eq(i).children("a").click();
-		closeMobileMenu();
 	});
 
 	// mobile popup

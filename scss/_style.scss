@@ -673,10 +673,11 @@ h2 {
 
 		.service-h {
 			height: 75px;
-			line-height: 75px;
-			float: left;
+			line-height: 28px;
+			vertical-align: middle;
+			display: table-cell;
 			color: #fff;
-			font-size: 24px;
+			font-size: 22px;
 			font-family: $lato;
 			font-weight: 700;
 			text-transform: uppercase;
@@ -692,6 +693,9 @@ h2 {
 			font-size: 14px;
 			text-transform: uppercase;
 			text-align: center;
+			position: absolute;
+			top: 0;
+			right: 0;			
 
 			i {
 				margin-left: 20px;
@@ -1025,16 +1029,16 @@ h2 {
 	height: 100%;
 	background-color: #333536;
 	position: absolute;
-	right: 0;
+	right: -280px;
 	top: 0;
 	z-index: 103;
-	@include translateX(280px);
-	@include  ts(ease,0.25s);
+	display: none;
 
 	&.menu-mobile-open {
-		@include translateX(0px);
+		display: block;
 	}
 }
+
 
 .hide-menu {
 	border-top: 1px solid #3e4041;

@@ -209,6 +209,11 @@
 
 	.why-right {
 		width: 410px;
+		padding: 0 8px;
+	}
+
+	.swiper-why .swiper-slide .why-inner {
+		padding: 0 5px;
 	}	
 
 	.why-left a {
@@ -453,6 +458,13 @@
 
 		img {
 			width: 140px;
+		}
+	}
+
+	.team {
+		.mid {
+			padding-top: 0 !important;
+			top: 100px !important;
 		}
 	}
 
@@ -745,6 +757,13 @@
 
 	// team
 
+	.team {
+		.mid {
+			padding-top: 0 !important;
+			top: 100px !important;
+		}
+	}
+
 	.profi-img {
 		float: none;
 		width: 100%;
@@ -929,5 +948,6 @@
 @media (max-height: 479px) {
 	.mid {
 		padding-top: 50px !important;
+		top: 0 !important;
 	}
 }
