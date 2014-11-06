@@ -57,8 +57,8 @@
 
 		.service-h {
 			height: 60px;
-			line-height: 60px;
-			font-size: 22px; 
+			line-height: 26px;
+			font-size: 20px;
 		}
 
 		.service-m {
@@ -90,11 +90,11 @@
 	.profi-info {
 		h3 {
 			font-size: 20px;
-			margin-bottom: 16px;
+			margin-bottom: 36px;
 		}
 
 		hr {
-			margin-bottom: 18px;
+			top: 35px;
 		}
 
 		p {
@@ -241,8 +241,8 @@
 
 		.service-h {
 			height: 60px;
-			line-height: 60px;
-			font-size: 20px; 
+			line-height: 26px;
+			font-size: 20px;
 		}
 
 		.service-m {
@@ -278,27 +278,24 @@
 	.profi-info {
 		h3 {
 			font-size: 20px;
-			margin-bottom: 16px;
+			margin-bottom: 26px;
 		}
 
 		hr {
-			margin-bottom: 18px;
+			top: 30px;
 		}
 
 		p {
-			font-size: 16px;
-			line-height: 22px;
-			margin-bottom: 20px;			
+			font-size: 14px;
+			line-height: 20px;
+			margin-bottom: 12px;			
 		}
 
 		.more-info {
 			width: 180px;
 			height: 40px;
 			line-height: 40px;
-			font-size: 14px;	
-			position: absolute;
-			left: 0;
-			top: 196px;		
+			font-size: 14px;		
 		}		
 	}
 
@@ -342,7 +339,7 @@
 }
 
 // FULL responsive view  w < 640px
-@media (max-width: 639px) {
+@media (max-width: 639px) {	
 	.mid {
 		width: 100%;
 		margin: 0;
@@ -414,10 +411,13 @@
 		width: 100%;
 
 		a {
+			&:active {
+				-webkit-tap-highlight-color: rgba(0,0,0,0);
+				-moz-tap-highlight-color: rgba(0,0,0,0);
+				tap-highlight-color: rgba(0,0,0,0);
+			}
 
 			&.active {
-				background-color: #fff;
-				border: 1px solid #fff;
 
 				span {
 					font-family: Tahoma, sans-serif;
@@ -425,6 +425,12 @@
 					font-weight: normal;
 					font-size: 14px;	
 				}
+			}
+
+			&:hover {
+				background-color: #fff;
+				user-select: none; 
+				-webkit-user-select: none;				
 			}
 		}		
 	}
@@ -435,14 +441,27 @@
 	.akardion a {
 		height: auto;
 		padding: 18px 10px;
+		user-select: none; 
+		-webkit-user-select: none;
+
+		&:active {
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+			-moz-tap-highlight-color: rgba(0,0,0,0);
+			tap-highlight-color: rgba(0,0,0,0);
+		}
+
+			&:hover {
+				background-color: rgba(255,255,255,0.15);
+				user-select: none; 
+				-webkit-user-select: none;				
+			}
 	}
 
 	.akardion a .service-h {
 		height: auto;
 		width: 100%;
-		text-align: center;
 		line-height: 16px;
-		font-size: 14px;
+		font-size: 12px;
 	}
 
 	.service-t, .service-m {
@@ -614,7 +633,6 @@
 		font-size: 18px;
 		line-height: 18px;
 		width: 89%;
-		@include text-overflow;
 		padding-bottom: 12px;
 		margin-bottom: 20px;		
 	}
@@ -732,6 +750,15 @@
 					font-size: 14px;	
 				}
 			}
+
+			user-select: none; 
+			-webkit-user-select: none;
+
+			&:hover {
+				background-color: #fff;
+				user-select: none; 
+				-webkit-user-select: none;				
+			}
 		}		
 	}
 
@@ -741,14 +768,21 @@
 	.akardion a {
 		height: auto;
 		padding: 18px 10px;
+		user-select: none; 
+		-webkit-user-select: none;
+
+			&:hover {
+				background-color: rgba(255,255,255,0.15);
+				user-select: none; 
+				-webkit-user-select: none;				
+			}		
 	}
 
 	.akardion a .service-h {
 		height: auto;
 		width: 100%;
-		text-align: center;
 		line-height: 16px;
-		font-size: 14px;
+		font-size: 12px;
 	}
 
 	.service-t, .service-m {
@@ -920,7 +954,6 @@
 		font-size: 18px;
 		line-height: 18px;
 		width: 89%;
-		@include text-overflow;
 		padding-bottom: 12px;
 		margin-bottom: 20px;		
 	}
