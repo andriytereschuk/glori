@@ -822,11 +822,11 @@ h2 {
 
 .swiper-testimonials {
 	width: 530px;
-	height: 270px;
+	height: 310px;
 	margin: 0 auto;
 
 	.swiper-slide {
-		height: 270px;
+		height: 310px;
 
 		.test-inner {
 		padding: 0 10px;
@@ -881,7 +881,7 @@ h2 {
 
 .timeline {
 	width: 510px;
-	margin: 40px auto 0;
+	margin: 20px auto 0;
 	height: 2px;
 	background-color: #fff;
 	position: relative;	
@@ -895,10 +895,10 @@ h2 {
 	&.go {
 		.status	{
 			@include  anim (status, linear, 3s);
-			-webkit-animation: 10s linear 0 normal forwards 1 status;
-			-moz-animation: 10s linear 0 normal forwards 1 status;
-			-o-animation: 10s linear 0 normal forwards 1 status;
-			animation: 10s linear 0 normal forwards 1 status;			
+			-webkit-animation: 14s linear 0 normal forwards 1 status;
+			-moz-animation: 14s linear 0 normal forwards 1 status;
+			-o-animation: 14s linear 0 normal forwards 1 status;
+			animation: 14s linear 0 normal forwards 1 status;			
 		}		
 	}
 }
@@ -917,7 +917,7 @@ h2 {
 	margin: 0 auto;
 	position: relative;
 	background-color: rgba(64,197,227,0.75);
-	padding: 40px 0 0 35px;
+	padding: 28px 0 0 35px;
 
 	.icon-blue-arrow {
 		position: absolute;
@@ -930,9 +930,9 @@ h2 {
 		margin-bottom: 20px;
 	}
 
-	a {
+	& > a {
 		margin-right: 8px;
-		margin-top: 18px;
+		margin-top: 15px;
 		@include ts(ease,0.6s);
 
 		&:hover {
@@ -965,6 +965,12 @@ h2 {
 		display:block;
 		margin-bottom: 8px;
 		float: left;
+
+		a {
+			color: #fff;
+			display: block;
+			margin-bottom: 5px;
+		}
 	}
 }
 

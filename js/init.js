@@ -255,7 +255,7 @@ $(function(){
 
 	var swiperTest = new Swiper('.swiper-testimonials',{
 		speed: 400,
-		autoplay: 10000,
+		autoplay: 14000,
 		loop: true,
 		autoplayDisableOnInteraction: false,
 		simulateTouch: false,
